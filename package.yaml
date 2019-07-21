@@ -1,0 +1,41 @@
+name:                enum-text-rio
+version:             1.0.0.0
+github:              "cdornan/enum-text-rio"
+license:             BSD3
+author:              "Chris Dornan"
+maintainer:          "chris@chrisdornan.com"
+copyright:           "2019 Chris Dornan"
+category:            Control
+synopsis:            "Making fmt available with rio"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description:         Please see the README on GitHub at <https://github.com/cdornan/enum-text-rio#readme>
+
+dependencies:
+- base        >= 4.10 && < 10
+- bytestring  >= 0.10
+- rio         >= 0.1.0.0
+- fmt         >= 0.6
+- enum-text   >= 0.5.1.0
+- text        >= 1.2.2.2
+
+ghc-options:
+- -Wall
+- -Wcompat
+
+library:
+  source-dirs: src
+
+executables:
+  demo-enum-text-rio:
+    main: demo-enum-text-rio.hs
+    source-dirs: app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - enum-text-rio

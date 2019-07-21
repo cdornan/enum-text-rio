@@ -1,0 +1,7 @@
+resolver: lts-13.28
+
+packages:
+- .
+
+extra-deps:
+  - enum-text-0.5.1.0
